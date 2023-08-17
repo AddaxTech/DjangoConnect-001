@@ -1,0 +1,149 @@
+html {
+    font-size: 16px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.moblie {
+    display: none;
+}
+
+.background {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+.container {
+    display: flex;
+    border-radius: 2em;
+    overflow: hidden;
+    height: 28em;
+    width: 56em;
+    position: relative;
+    box-shadow: 0px 5px 10px black;
+}
+
+.center {
+    /* background-color: rgb(43, 55, 55); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+    box-sizing: border-box;
+
+}
+
+.contain {
+    box-sizing: border-box;
+    background-color: rgb(216, 206, 185);
+    background-image: linear-gradient(to bottom right, rgba(147, 183, 111, 0.5), rgba(141, 110, 39, 0.3));
+    width: 22em;
+    height: 100%;
+    border-radius: 2em;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    padding-top: 5em;
+    border: 1px black solid;
+}
+
+.contain2>video {
+    height: 100%;
+    width: 100%;
+}
+
+.contain2>img {
+    height: 100%;
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(48, 94, 41);
+}
+
+a:visited {
+    color: rgb(96, 41, 41);
+}
+
+a:hover {
+    color: rgb(46, 41, 96);
+}
+
+.contain label+label,
+input+label {
+    padding: 38px;
+}
+
+@media only screen and (max-width: 799px) {
+    .contain2>video {
+        object-fit: cover;
+        height: 450px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .desktop {
+        display: none;
+    }
+
+    .moblie {
+        display: initial;
+    }
+
+    .contain2>img {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        z-index: -2;
+    }
+
+    .contain_mobile {
+        height: 80vh;
+        width: 100vw;
+        border-radius: 2em;
+        text-align: center;
+        justify-content: center;
+        right: 0;
+        top: 12%;
+        position: absolute;
+        font-size: larger;
+        font-weight: 600;
+
+
+    }
+
+    .contain_mobile input {
+        border-radius: 20px;
+        padding: 4px;
+        width: 200px;
+    }
+
+    .contain_mobile input:last-child {
+        width: 120px;
+        background-color: rgb(183, 180, 144);
+        font-size: 20px;
+    }
+
+    .contain_mobile p {
+        padding: 2px;
+        font-size: 17px;
+    }
+    
+
+}
