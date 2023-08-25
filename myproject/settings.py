@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ['ENV_SECRET_KEY']
-SECRET_KEY = "123"
+SECRET_KEY = os.environ['ENV_SECRET_KEY']
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -79,27 +79,17 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ["PGDATABASE"],
-#         'USER': os.environ["PGUSER"],
-#         'PASSWORD': os.environ["PGPASSWORD"],
-#         'HOST': os.environ["PGHOST"],
-#         'PORT': os.environ["PGPORT"],
-#     }
-# }
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "railway",
-        'USER': "postgres",
-        'PASSWORD': "Vkun5ZgrIupegAQa1hp0",
-        'HOST': "containers-us-west-108.railway.app",
-        'PORT':"6295",
+        'NAME': os.environ["PGDATABASE"],
+        'USER': os.environ["PGUSER"],
+        'PASSWORD': os.environ["PGPASSWORD"],
+        'HOST': os.environ["PGHOST"],
+        'PORT': os.environ["PGPORT"],
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
