@@ -8,13 +8,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="{% static 'styles/register.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/login.css' %}" />
 
   <title>CA Login</title>
 </head>
 
 <body>
-  <div class="desktop">
     <div class="background" style="background-image: url({% static 'media/computer-gf9ea5290a_1920.jpg'%})">
       <div class="center">
         <main class="container">
@@ -23,72 +22,41 @@
 
           </div>
           <div class="contain">
-            <h2>Sign In</h2>
+            <h1>Sign In</h1>
             {% for message in messages %}
             <style>
-              h5 {
+              h2 {
                 color: red;
               }
+              @media screen and (max-width: 723px){
+                .center{
+                   min-height: 620px;
+                  }
+              }
+
             </style>
-            <h5>{{message}}</h5>
+            <h2>{{message}}</h2>
             {% endfor %}
             <form method="POST" action="">
               {% csrf_token %}
               <label for="username">Email</label>
               <br />
               <input type="email" id="username" name="username" /><br /><br />
-              <label for="text">Password</label>
+              <label for="password">Password</label>
               <br />
               <input type="password" id="password" name="password" /><br /><br />
-              <input type="submit" value="Submit" />
+              <input class="submit-button" type="submit" value="Submit" />
             </form>
             <br />
             <br />
-            <a href="">Forgot Password</a>
+            <a href="register">Forget Password</a>
             <br />
             <br />
-
             <a href="register" return="flase">Register</a>
           </div>
         </main>
       </div>
     </div>
-  </div>
-  <!-- moblie version -->
-  <div class="moblie">
-    <div class="contain2">
-      <img src="{% static 'media/fiber-4814456_1280.jpg' %}" />
-    </div>
-
-    <div class="contain_mobile">
-      <h2>Login</h2>
-      {% for message in messages %}
-      <style>
-        h5 {
-          color: red;
-          padding: 10px;
-        }
-      </style>
-      <h5>{{message}}</h5>
-      {% endfor %}
-      <form method="POST" action="">
-        {% csrf_token %}
-        <span class="username">Email</span>
-        <br />
-        <input type="email" id="username" name="username span_s" /><br /><br />
-        <span class="password">Password</span>
-        <br />
-        <input type="password" id="password" name="password" /><br /><br />
-        <input type="submit" value="Login" />
-      </form>
-      <p><a href="register" return="flase">Register</a>
-      </p>
-      <p><a href="">Forgot Password</a></p>
-
-
-
-    </div>
-  </div>
 
 </body>
 

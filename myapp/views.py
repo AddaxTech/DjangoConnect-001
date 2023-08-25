@@ -33,12 +33,17 @@ def login(request):
 
 def register(request):
     if request.method == 'POST':
+
         first_name = request.POST['fname']
         last_name = request.POST['lname']
         
         email = request.POST['email']
         username = email
         password = request.POST['password']
+        
+        if first_name or last_name or email or password is "":
+            messages.info(request, 'Please fill in all required fields')
+            return redirect('register')
         
         if User.objects.filter(email=email).exists():
             messages.info(request, 'Email Already Used')

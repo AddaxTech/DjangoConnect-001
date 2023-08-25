@@ -19,7 +19,7 @@
 
 <body>
   <div class="desktop">
-    <div class="background" style="background-image: url({% static 'media/forest-gb26686e9c_1920.jpg' %})">
+    <div class="background" style="background-image: url({% static 'media/TreeFallLeaves.jpeg' %})">
 
       <div class="center">
         <main class="container">
@@ -29,35 +29,50 @@
             </video>
           </div>
           <div class="contain">
-            <h2>Register</h2>
+            <h1>Register</h1>
             <form method="POST" action="">
               {% csrf_token %}
-              <label for="fname">First Name</label class='label'>
-              <label for="lname">Last Name</label id="label">
-              <br>
-              <input type="text" id="fname" name="fname">
-              <input type="text" id="lname" name="lname">
-              <br>
-              <br>
               {% for message in messages %}
               <style>
-                h5 {
+                h2 {
                   color: red;
                 }
+                @media screen and (min-width: 723px){
+                  .contain {
+                    padding-top: 10vh;
+                  }
+                }
               </style>
-              <h5> {{message}} </h5>
+              <h2>{{message}}</h2>
               {% endfor %}
-              <label for="fname">Email</label>
+<div class="felx">
+
+  <div>
+  <label for="fname">First Name</label class='label'>
+    <br>
+
+    <input type="text" id="fname" name="fname">
+  </div>
+  <div>
+    <label for="lname">Last Name</label id="label">
+      <br>
+    <input type="text" id="lname" name="lname">
+
+    </div>
+</div>
+<br>
+
+              <label for="email">Email</label>
               <br>
               <input type="email" id="email" name="email">
               <br>
               <br>
-              <label for="lname">Password</label>
+              <label for="password">Password</label>
               <br>
               <input type="password" id="password" name="password">
               <br>
               <br>
-              <input type="submit" value="Submit">
+              <input class="submit-button" type="submit" value="Submit">
             </form>
             <br>
             <br>
@@ -68,50 +83,6 @@
       </div>
     </div>
   </div>
-  <!-- moblie version -->
-  <div class="moblie">
-    <div class="contain2">
-      <img src="{% static 'media/autumn.jpg' %}" />
-    </div>
-    <div class="contain_mobile">
-      <h2>Register</h2>
-      <form method="POST" action="">
-        {% csrf_token %}
-        <label for="fname">First Name</label class='label'>
-
-        <br>
-        <input type="text" id="fname" name="fname">
-        <br>
-        <br> <label for="lname">Last Name</label id="label">
-        <br>
-        <input type="text" id="lname" name="lname">
-        <br>
-        <br>
-        {% for message in messages %}
-        <style>
-          h5 {
-            color: red;
-          }
-        </style>
-        <h5> {{message}} </h5>
-        {% endfor %}
-        <label for="fname">Email</label>
-        <br>
-        <input type="email" id="email" name="email">
-        <br>
-        <br>
-        <label for="lname">Password</label>
-        <br>
-        <input type="password" id="password" name="password">
-        <br>
-        <br>
-        <input type="submit" value="Create" />
-      </form>
-      <p><a href="login" return="flase">Login</a></p>
-
-    </div>
-  </div>
-
 </body>
 
 </html>

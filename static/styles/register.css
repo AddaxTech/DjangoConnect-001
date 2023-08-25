@@ -1,149 +1,198 @@
 html {
-    font-size: 16px;
-
+  font-size: 16px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-}
-
-.moblie {
-    display: none;
+  margin: 0;
+  padding: 0;
 }
 
 .background {
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-
-
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 .container {
-    display: flex;
-    border-radius: 2em;
-    overflow: hidden;
-    height: 28em;
-    width: 56em;
-    position: relative;
-    box-shadow: 0px 5px 10px black;
+  display: flex;
+  border-radius: 2em;
+  height: 28em;
+  width: 56em;
+  position: relative;
+  box-shadow: 0px 5px 10px black;
+  overflow: hidden;
 }
 
 .center {
-    /* background-color: rgb(43, 55, 55); */
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 3em;
-    box-sizing: border-box;
-
+  height: 100vh;
+  min-height: 580px;
+  padding-top: 35px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
+  box-sizing: border-box;
 }
 
 .contain {
-    box-sizing: border-box;
-    background-color: rgb(216, 206, 185);
-    background-image: linear-gradient(to bottom right, rgba(147, 183, 111, 0.5), rgba(141, 110, 39, 0.3));
-    width: 22em;
-    height: 100%;
-    border-radius: 2em;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    padding-top: 5em;
-    border: 1px black solid;
+  box-sizing: border-box;
+  background-color: rgb(216, 206, 185);
+  /* background-image: linear-gradient(
+    to bottom right,
+    rgb(255 179 67 / 45%),
+    rgb(7 57 15 / 57%),
+    rgba(0, 0, 0, 0.88)
+  ); */
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(255 179 67 / 25%),
+    rgb(7 57 15 / 37%),
+    rgba(0, 0, 0, 0.78)
+  );
+  width: 22em;
+  height: 100%;
+  border-radius: 2em;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  padding-top: 5em;
+  border: 1px black solid;
 }
 
-.contain2>video {
-    height: 100%;
-    width: 100%;
+.contain2 > video {
+  height: 100%;
+  width: 100%;
 }
 
-.contain2>img {
-    height: 100%;
-    width: 100%;
+.contain2 > img {
+  height: 100%;
+  width: 100%;
 }
-
 
 a {
-    text-decoration: none;
-    color: rgb(48, 94, 41);
-}
-
-a:visited {
-    color: rgb(96, 41, 41);
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+  font-weight: 900;
 }
 
 a:hover {
-    color: rgb(46, 41, 96);
+  color: rgb(0, 0, 0);
 }
 
-.contain label+label,
-input+label {
-    padding: 38px;
+.contain label + label,
+input + label {
+  padding: 38px;
 }
 
+main input {
+  outline: none;
+  border-radius: 5px;
+  border: solid 2px;
+}
+
+main input:focus {
+  outline: none;
+  border: 2px solid hsla(139, 98%, 19%, 0.8);
+}
+label{
+    font-weight: 800;
+    color: #000000;
+}
+.submit-button{
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .submit-button:hover{
+background-color: rgb(110, 113, 116);
+  }
+h1{
+    cursor:default;
+}
 @media only screen and (max-width: 799px) {
-    .contain2>video {
-        object-fit: cover;
-        height: 450px;
-    }
+  .contain2 > video {
+    object-fit: cover;
+    height: 450px;
+  }
 }
 
-@media only screen and (max-width: 650px) {
-    .desktop {
-        display: none;
-    }
+@media screen and (max-width: 723px) {
+  .contain2 > video {
+    display: none;
+  }
 
-    .moblie {
-        display: initial;
-    }
+  .contain h1,
+  label {
+    color: #ffffff;
+  }
 
-    .contain2>img {
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
-        z-index: -2;
-    }
+  .contain2 > img {
+    display: none;
+  }
 
-    .contain_mobile {
-        height: 80vh;
-        width: 100vw;
-        border-radius: 2em;
-        text-align: center;
-        justify-content: center;
-        right: 0;
-        top: 12%;
-        position: absolute;
-        font-size: larger;
-        font-weight: 600;
+  .container {
+    border: none;
+    height: 100%;
+    width: 100%;
+  }
+
+  .contain {
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/230/410/477/landscape-macro-green-nature-wallpaper-thumb.jpg");
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 5em;
+  }
+
+  .center {
+    padding-left: 60px;
+    padding-right: 60px;
+    min-height: 620px;
+       
+  }
+
+  a {
+    color: rgb(255, 255, 255);
+  }
+
+  a:hover {
+    color: rgb(187, 187, 187);
+  }
+
+  .contain .felx {
+    grid-template-columns: auto;
+  }
+
+  .felx div {
+    padding: 8px;
+  }
 
 
-    }
 
-    .contain_mobile input {
-        border-radius: 20px;
-        padding: 4px;
-        width: 200px;
-    }
+}
 
-    .contain_mobile input:last-child {
-        width: 120px;
-        background-color: rgb(183, 180, 144);
-        font-size: 20px;
-    }
+.felx {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+}
 
-    .contain_mobile p {
-        padding: 2px;
-        font-size: 17px;
-    }
-    
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 2.7vh;
+  }
 
+  input {
+    font-size: 3vh;
+    padding: 1vh;
+  }
 }
