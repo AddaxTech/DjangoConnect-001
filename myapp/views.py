@@ -41,7 +41,7 @@ def register(request):
         username = email
         password = request.POST['password']
         
-        if first_name or last_name or email or password is "":
+        if not first_name or not last_name or not email or not password:
             messages.info(request, 'Please fill in all required fields')
             return redirect('register')
         
